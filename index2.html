@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .player {
+            background: #ffffff;
+            width: 320px;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .player h1 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .album-art {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+        }
+
+        /* Optional: Slightly improve native controls appearance */
+        audio::-webkit-media-controls-panel {
+            background-color: #f4f4f4;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-volume-slider {
+            filter: hue-rotate(220deg);
+        }
+
+        .track-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #text-form {
+            margin-top: 20px;
+            padding: 10px;
+            width: 280px;
+            border: 2px solid #764ba2;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+        table{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th,td{
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="player">
+    <h1>My Music Player</h1>
+    <aside>
+        <p>
+            Enjoy your favorite tunes with this simple music player.
+        </p>
+    </aside>
+    <img src="image.png" alt="Album Art" class="album-art">
+
+    <div class="track-info">
+        Now Playing: <strong>song.mp3</strong>
+    </div>
+
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+</body>
+</html>
